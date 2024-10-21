@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Deseja deletar a transação?</h1>
+  <h3>Transação: {{transaction.title}}</h3>
+  <h3>Valor: R$ <span [className]="transaction.transactionType === 'receita' ? 'positive' : 'negative' ">{{transactionValueFormated}}</span></h3>
+
+  <div class="flex-SB">
+    <button class="delete" (click)="confirm(transaction.id ? transaction.id : 0)">Confirmar</button>
+    <button class="cancel" (click)="confirm(0)">Cancelar</button>
+  </div>
+</div>

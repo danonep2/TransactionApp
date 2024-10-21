@@ -1,0 +1,24 @@
+button{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  margin: 20px;
+  cursor: pointer;
+  background-color: #27AE60;
+  color: white;
+  font-size: 60px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  transition: all 0.5s;
+}
+
+button:hover{
+  background-color: #2ECC71;
+  transform: scale(1.1);
+}

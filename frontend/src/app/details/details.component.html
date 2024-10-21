@@ -1,0 +1,18 @@
+<div class="container-details">
+  <div>
+    <h2>
+      {{ transaction.title }}
+    </h2>
+    <p style="text-decoration: underline;">Categoria: {{transaction.category}}</p>
+    <p>Criada em: {{formatDateTime(transaction.created_at)}}</p>
+    @if (transaction.updated_at !== transaction.created_at){
+      <p>Editado em: {{formatDateTime(transaction.updated_at)}}</p>
+    }
+  </div>
+  <div class="left">
+    <h3>Valor: <span [className]="+transaction.transactionValue > 0 ? 'positive' : 'negative'">R$ {{transactionValueFormated}}</span></h3>
+    <hr/>
+    <h3>Descrição:</h3>
+    <p>{{transaction.descricao}}</p>
+  </div>
+</div>

@@ -1,0 +1,119 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 400px ;
+  border: 1px solid #ccc;
+  padding: 40px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label{
+  font-size: 25px;
+  margin-bottom: 4px;
+  margin-top: 15px;
+}
+
+input, textarea{
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px 10px;
+}
+
+input:focus select:focus{
+  outline: none;
+}
+
+.transactionType{
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.type{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  border: 2px solid ;
+  border-radius: 5px;
+  width: 100px;
+  cursor: pointer;
+  padding: 25px 60px;
+  transition: all 1.2s;
+  transition: transform 0.2s;
+}
+.type > input{
+  display: none;
+}
+
+.type>p{
+  font-size: 20px;
+  text-align: center;
+}
+
+.active-receita{
+  transform: scale(1.1);
+  color: #27AE60 ;
+}
+
+.active-despesa{
+  transform: scale(1.1);
+  color: #E74C3C;
+}
+
+.options{
+  margin: 15px 0
+}
+
+select{
+  height: 45px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  padding: 0 5px;
+  text-align: center;
+}
+
+option{
+  text-align: center;
+  font-size: 15px;
+}
+option::after:hover{
+  background-color: #f1f1f1;
+}
+
+button{
+  margin-top: 20px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  background-color: #27AE60;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+textarea {
+  resize: none;
+  height: 60px;
+  padding: 5px;
+}

@@ -1,0 +1,26 @@
+<p-toast />
+
+<app-header
+  [balance]="balance"
+  ></app-header>
+
+<app-transaction-list
+  [transactionList]="transactions"
+  (buttonDeleteClickedFromList)="sendConfirm($event)"
+  (buttonEditClickedFromList)="openEditModal($event)"
+  (buttonDetailsClickedFromList)="openDetailsModal($event)"
+  ></app-transaction-list>
+
+<app-modal
+  [showModal]="showModal"
+  (buttonClicked)="closeModal()"
+  (toastActiveFromModal)="showToast($event)"
+  (confirmActionFromModal)="deleTransaction($event)"
+  [editeMode]="editMode"
+  [transaction]="transactionFocus"
+  [contentShown]="contentShown"
+
+
+  ></app-modal>
+
+<app-add-button (click)="openModalForms()"></app-add-button>

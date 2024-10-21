@@ -1,0 +1,14 @@
+<div class="header-container">
+  <div class="title">
+    <h1>
+      TransactionApp
+      <i class="pi pi-credit-card"></i>
+    </h1>
+  </div>
+  <p>
+    Saldo:
+    <span
+      [className]="balance >= 0 ? 'positive' : 'negative'"
+    >R$ {{balance.toFixed(2).replace('.',',')}}</span>
+  </p>
+</div>

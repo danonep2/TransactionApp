@@ -1,0 +1,55 @@
+@import "primeicons/primeicons.css";
+
+.flex-continer {
+  display: flex;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.transaction-info {
+  width: 80%;
+  cursor: pointer;
+  min-width: 350px;
+  height: 80px;
+  border: 1px solid #ccc;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  border-radius: 5px;
+  display: flex;
+}
+.transaction-info > div > h2{
+  margin: 0;
+  margin-top: 10px;
+}
+
+.receita {
+  color: #27AE60;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.despesa {
+  font-size: 20px;
+  font-weight: bold;
+  color: #C0392B;
+}
+
+button {
+  color: white;
+  height: 80px;
+  width: 80px;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.edit {
+  background-color: #3498DB;
+}
+
+.delete {
+  background-color: #E74C3C;
+}

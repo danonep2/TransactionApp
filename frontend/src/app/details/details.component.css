@@ -1,0 +1,36 @@
+.container-details{
+    width: 600px;
+    position: absolute;
+    padding: 50px 30px;
+    display: flex;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    margin: 0 auto;
+    z-index: 15;
+    border-radius: 5px;
+}
+.container-details > div{
+    margin: 10px 0;
+    padding: 10px;
+}
+
+hr{
+    border: 1px solid #f1f1f1;
+    margin: 10px 0;
+}
+
+p{
+  margin:  10px 0
+}
+
+.positive{
+  color: green;
+}
+.negative{
+  color: red;
+}
+.left{
+  max-width: 300px;
+}

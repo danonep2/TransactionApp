@@ -1,0 +1,50 @@
+.container{
+  max-width: 600px;
+  width: 90%;
+  display: flex;
+  position: inherit;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+}
+button{
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.flex{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.flex button{
+  width: 48%;
+  margin: 0;
+}
+
+.active-todas{
+  background-color: #3498DB ;
+  color: white;
+}
+
+.active-receita{
+  background-color: #2ECC71 ;
+  color: white;
+}
+
+.active-despesa{
+  background-color: #E74C3C ;
+  color: white;
+}
+
+.nothing{
+  color: #909090;
+  margin-top: 45px;
+}

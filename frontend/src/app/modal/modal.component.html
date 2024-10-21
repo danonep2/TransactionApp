@@ -1,0 +1,26 @@
+<div class="modal">
+  @if (showModal){
+    <div class="modalBG" (click)="onButtonClick()"></div>
+    @if (contentShown === 'form'){
+      <div class="modal-content">
+        <app-form
+          [editMode]="editeMode"
+          [transaction]="transaction"
+          (buttonClicked)="onButtonClick()"
+          (toastActiveFromForm)="toastActiveEmit($event)"
+        ></app-form>
+    </div>
+  }
+  @if (contentShown === 'details'){
+    <app-details
+      [transaction]="transaction"    ></app-details>
+  }
+  @if (contentShown === 'confirm'){
+    <app-confirm
+      [transaction]="transaction"
+      (buttonClicked)="onButtonClick()"
+      (confirmAction)="confirmAction($event)"
+    ></app-confirm>
+  }
+  }
+</div>

@@ -1,0 +1,24 @@
+<div class="transaction-container">
+  <div class="flex-continer">
+    <div class="transaction-info"
+    (click)="onButtonDetailsClick(transaction)">
+      <div>
+        <h2>{{transaction.title}}</h2>
+        <p>{{transaction.category}}</p>
+      </div>
+      <p [className]="transaction.transactionType">
+        R$
+        {{ transactionValueFormated }}
+      </p>
+    </div>
+    <button class="edit" (click)="onButtonEditClick(transaction)">
+      <i class="pi pi-pencil"></i>
+    </button>
+
+    <button class="delete" (click)="onButtonDeleteClick(transaction.id? transaction.id : 0 )">
+      <i class="pi pi-trash"></i>
+    </button>
+
+
+  </div>
+</div>

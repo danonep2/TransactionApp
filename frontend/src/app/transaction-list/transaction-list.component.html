@@ -1,0 +1,29 @@
+<div class="container">
+  <button
+  (click)="chanceFilter('todas')"
+  [className]="filterSelected == 'todas' ? 'active-todas' : ''"
+  >Todas</button>
+  <div class="flex">
+    <button
+    (click)="chanceFilter('receita')"
+    [className]="filterSelected == 'receita' ? 'active-receita' : ''"
+    >Receitas</button>
+
+    <button
+    (click)="chanceFilter('despesa')"
+    [className]="filterSelected == 'despesa' ? 'active-despesa' : ''"
+    >Despesas</button>
+  </div>
+
+  @for (transaction of transactionListFiltered; track transaction.id) {
+      <app-transaction-content
+      [transaction]="transaction"
+      (buttonEditClickedFromContent)="onEditButtonClicked($event)"
+      (buttonDeleteClickedFromContent)="onDeleteButtonClicked($event)"
+      (buttonDetailsClickedFromContent)="onDetailsButtonClicked($event)"
+      ></app-transaction-content>
+  }
+  @if (transactionListFiltered.length == 0) {
+      <p class="nothing">Nenhuma transação cadastrada aqui</p>
+  }
+</div>

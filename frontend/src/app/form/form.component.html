@@ -1,0 +1,54 @@
+<form >
+  <h1>{{editMode? "Editar Transação" : 'Adicionar Transação' }}</h1>
+
+  @if (editMode){
+    <input type="hidden" name="id" [(ngModel)]="transaction.id" value="{{transaction.id}}">
+  }
+
+  <label>Titulo</label>
+  <input type="text" placeholder="Titulo da transação" name="titulo" [(ngModel)]="transaction.title" value="{{transaction.title}}">
+
+  <label>Valor</label>
+  <input type="number" placeholder="Valor da transação" name="valor" [(ngModel)]="transaction.transactionValue" value="{{transaction.transactionValue}}">
+
+  <label>Tipo</label>
+  <div class="transactionType">
+    <div
+      [className]="transaction.transactionType === 'receita' ? 'active-receita type' : 'type'"
+      (click)="onClickType('receita')"
+      >
+      <input type="radio" name="tipo" value="receita"
+      [(ngModel)]="transaction.transactionType"
+      [checked]="transaction.transactionType === 'receita'"
+      >
+      <p>Receita</p>
+    </div>
+    <div
+      [className]="transaction.transactionType === 'despesa' ? 'active-despesa type' : 'type'"
+      (click)="onClickType('despesa')"
+      >
+      <input type="radio" name="tipo" value="despesa"
+      [(ngModel)]="transaction.transactionType"
+      [checked]="transaction.transactionType === 'despesa'"
+      >
+      <p>Despesa</p>
+    </div>
+  </div>
+
+  <label>Descrição</label>
+  <textarea  placeholder="Descrição da transação" name="descricao" [(ngModel)]="transaction.descricao" value="{{transaction.descricao}}"></textarea>
+
+  <label>Categoria:</label>
+  <select name="categoria" [(ngModel)]="transaction.category" value="{{transaction.category}}">
+    <option value="Salário">Salario</option>
+    <option value="Manuntenção">Manuntenção</option>
+    <option value="Multa">Multa</option>
+    <option value="Aluguel">Aluguel</option>
+    <option value="Pagamento">Pagamento</option>
+    <option value="Pro-labore">Pro-labore</option>
+    <option value="Fatura">Fatura</option>
+    <option value="Outro">Outro</option>
+  </select>
+
+  <button type="button" (click)="submit()">{{editMode? "Atualizar" : "Salvar"}}</button>
+</form>

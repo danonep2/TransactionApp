@@ -1,0 +1,51 @@
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  background-color: white;
+  padding: 20px;
+  z-index: 15;
+  border-radius: 5px;
+}
+
+h1{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+button{
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.flex-SB{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.delete{
+  background-color: #4CAF50;
+  color: white;
+}
+.cancel{
+  background-color: #f44336;
+  color: white;
+}
+
+.positive{
+  color: green;
+}
+.negative{
+  color: red;
+}
